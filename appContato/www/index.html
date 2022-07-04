@@ -1,6 +1,8 @@
 <!DOCTYPE html>
 <html>
     <head>
+    <link rel="stylesheet" type="text/css" href="mobileui/fonts.css">
+    <link rel="stylesheet" type="text/css" href="mobileui/style.css">
         <meta name="format-detection" content="telephone=no">
         <meta charset="utf-8">
         <meta name="msapplication-tap-highlight" content="no">
@@ -9,9 +11,26 @@
         <title>Apache Cordova</title>
     </head>
     <body>
-
+      <div class="header purple">
+        <button class="left icon ion-navicon"></button>
+        <h1>Contatos</h1>
+      </div>
+      <div class="content padding has-header">
+        <div class="list radius-big margin-top">
+          <div class="item icon ion-person">
+            <input type="text" id="name" name="name" placeholder="Digite o nome do Contato">
+          </div>
+          <div class="item icon ion-at">
+            <input type="email" id="email" name="email" placeholder="Digite o email do Contato">
+          </div>
+          <div class="item">
+            <button class="purple full radius-big" onclick="saveContact()">Salvar Contato</button>
+          </div>
+        </div>
+      </div>
       
       <script type="text/javascript" src="cordova.js"></script>
+        <script type="text/javascript" src="mobileui/mobileui.js"></script>
       <script type="text/javascript" src="js/index.js"></script>
     </body>
 </html>
