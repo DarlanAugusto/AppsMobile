@@ -16,7 +16,7 @@
         <h1>Contatos</h1>
       </div>
       <div class="content padding has-header">
-        <div class="list radius-big margin-top">
+        <div class="list radius-big margin-top shadow">
           <div class="item icon ion-person">
             <input type="text" id="name" name="name" placeholder="Digite o nome do Contato">
           </div>
@@ -24,7 +24,21 @@
             <input type="email" id="email" name="email" placeholder="Digite o email do Contato">
           </div>
           <div class="item">
-            <button class="purple full radius-big" onclick="saveContact()">Salvar Contato</button>
+            <button class="purple full radius-big shadow" onclick="saveContact()" id="btnSaveContact">Salvar Contato</button>
+          </div>
+        </div>
+        <div class="space"></div>
+        <div class="list radius-big">
+          <div class="item" data="CONTACTS">
+            <h2 class="text-strong">${name}</h2>
+            <p class="text-strong opacity-50">${email}</p>
+            <div 
+              class="right" 
+              style="gap: 4px;"
+            >
+              <button class="purple icon ion-edit circle padding text-white shadow" onclick="editContact($$index)"></button>
+              <button class="red-400 icon ion-trash-b circle padding text-white shadow" onclick="deleteContact($$index)"></button>
+            </div>
           </div>
         </div>
       </div>
