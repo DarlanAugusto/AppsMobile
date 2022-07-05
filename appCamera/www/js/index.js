@@ -1,10 +1,12 @@
 function tirarFoto() {
     var cameraOptions = {
-        quality: 70,
+        quality: 100,
         destinationType: 0,
         targetWidth: 400,
-        targetHeigth: 400,
-        mediaType: 0
+        targetHeight: 400,
+        mediaType: 0,
+        correctOrientation: true,
+        sourceType: 0
 
     }
     // abre a camera
